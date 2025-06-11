@@ -9,10 +9,34 @@
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-  <header>…navbar comme index.html…</header>
+  <header>…navbar + hero identiques à index…</header>
 
   <main>
-    <h2>Nos articles</h2>
+    <!-- Section filtres -->
+    <section class="filters">
+      <div>
+        <label for="catFilter">Catégorie :</label>
+        <select id="catFilter">
+          <option value="all">Toutes</option>
+          <option value="tshirt">T-shirts</option>
+          <option value="robe">Robes</option>
+          <option value="veste">Vestes</option>
+          <option value="jean">Jeans</option>
+        </select>
+      </div>
+      <div>
+        <label for="sizeFilter">Taille :</label>
+        <select id="sizeFilter">
+          <option value="all">Toutes</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </div>
+    </section>
+
+    <h2>Nouveautés</h2>
     <div class="product-grid" id="products-grid"></div>
 
     <div id="cart-panel" class="hidden">
@@ -23,8 +47,17 @@
     </div>
   </main>
 
+  <!-- Section contact -->
+  <footer class="contact">
+    <h3>Contactez-nous</h3>
+    <p>Email : <a href="mailto:charafpicso22@gmail.com">charafpicso22@gmail.com</a></p>
+    <p>Téléphone : <a href="tel:+213549835632">0549835632</a></p>
+  </footer>
+
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/stripe-checkout.js"></script>
+  <script src="js/filters.js"></script>
 </body>
 </html>
+
