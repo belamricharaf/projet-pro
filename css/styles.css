@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+header nav { display: flex; justify-content: space-around; align-items: center; padding: 1rem; background: #fff; border-bottom: 1px solid #eee; }
+header .banner { text-align: center; padding: 4rem 1rem; background: url('../images/banner.jpg') center/cover no-repeat; color: #fff; }
+.btn { background: #000; color: #fff; padding: 0.75rem 1.5rem; text-decoration: none; }
+main { padding: 2rem; }
+#products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
+.product { border: 1px solid #ddd; padding: 1rem; }
+.hidden { display: none; }
+#cart-panel { position: fixed; top: 20%; right: 2%; width: 300px; background: #fff; border: 1px solid #ddd; padding: 1rem; }
