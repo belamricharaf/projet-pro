@@ -1,31 +1,52 @@
 const products = [
-  { id: 'p1', name: 'T-shirt Mode', price: 19.99, img: 'images/tshirt.jpg', category: 'tshirt', sizes: ['S','M','L'] },
-  { id: 'p2', name: 'Robe élégante', price: 49.99, img: 'images/robe.jpg', category: 'robe', sizes: ['M','L'] },
-  { id: 'p3', name: 'Veste stylée', price: 89.99, img: 'images/veste.jpg', category: 'veste', sizes: ['S','M','L','XL'] },
-  { id: 'p4', name: 'Jean classique', price: 59.99, img: 'images/jean.jpg', category: 'jean', sizes: ['M','L','XL'] }
+  { id:'p1', name:'T‑Shirt Basique Blanc', price:14.99, img:'images/p1.jpg', category:'tshirt', sizes:['S','M','L','XL'] },
+  { id:'p2', name:'T‑Shirt Col V Bleu', price:15.99, img:'images/p2.jpg', category:'tshirt', sizes:['S','M','L'] },
+  { id:'p3', name:'T‑Shirt Graphique Noir', price:17.99, img:'images/p3.jpg', category:'tshirt', sizes:['M','L','XL'] },
+  { id:'p4', name:'T‑Shirt Rayé', price:16.99, img:'images/p4.jpg', category:'tshirt', sizes:['S','M','L','XL'] },
+  { id:'p5', name:'T‑Shirt Manches Longues', price:19.99, img:'images/p5.jpg', category:'tshirt', sizes:['M','L'] },
+  { id:'p6', name:'Robe Fleurie Été', price:39.99, img:'images/p6.jpg', category:'robe', sizes:['S','M','L'] },
+  { id:'p7', name:'Robe Cocktail', price:49.99, img:'images/p7.jpg', category:'robe', sizes:['M','L'] },
+  { id:'p8', name:'Robe Longue Chic', price:59.99, img:'images/p8.jpg', category:'robe', sizes:['S','M','L','XL'] },
+  { id:'p9', name:'Robe Automne', price:44.99, img:'images/p9.jpg', category:'robe', sizes:['S','M'] },
+  { id:'p10', name:'Robe Bohème', price:42.99, img:'images/p10.jpg', category:'robe', sizes:['M','L','XL'] },
+  { id:'p11', name:'Veste Cuir', price:89.99, img:'images/p11.jpg', category:'veste', sizes:['M','L','XL'] },
+  { id:'p12', name:'Blouson Denim', price:69.99, img:'images/p12.jpg', category:'veste', sizes:['S','M','L','XL'] },
+  { id:'p13', name:'Veste Classique Noire', price:79.99, img:'images/p13.jpg', category:'veste', sizes:['M','L'] },
+  { id:'p14', name:'Veste Harrington', price:74.99, img:'images/p14.jpg', category:'veste', sizes:['S','M','L'] },
+  { id:'p15', name:'Veste Sport', price:64.99, img:'images/p15.jpg', category:'veste', sizes:['M','L','XL'] },
+  { id:'p16', name:'Jean Slim Bleu', price:59.99, img:'images/p16.jpg', category:'jean', sizes:['S','M','L','XL'] },
+  { id:'p17', name:'Jean Droit Gris', price:54.99, img:'images/p17.jpg', category:'jean', sizes:['M','L'] },
+  { id:'p18', name:'Jean Déchiré Noir', price:64.99, img:'images/p18.jpg', category:'jean', sizes:['S','M','L','XL'] },
+  { id:'p19', name:'Jean Bootcut', price:57.99, img:'images/p19.jpg', category:'jean', sizes:['M','L','XL'] },
+  { id:'p20', name:'Jean Clair Déco', price:62.99, img:'images/p20.jpg', category:'jean', sizes:['S','M','L'] },
+  { id:'p21', name:'Pull Cachemire', price:79.99, img:'images/p21.jpg', category:'pull', sizes:['S','M','L','XL'] },
+  { id:'p22', name:'Pull Col Roulé', price:69.99, img:'images/p22.jpg', category:'pull', sizes:['M','L'] },
+  { id:'p23', name:'Pull Marin Rayé', price:64.99, img:'images/p23.jpg', category:'pull', sizes:['S','M','L','XL'] },
+  { id:'p24', name:'Pull Sport', price:59.99, img:'images/p24.jpg', category:'pull', sizes:['M','L','XL'] },
+  { id:'p25', name:'Pull Hiver Doux', price:74.99, img:'images/p25.jpg', category:'pull', sizes:['S','M','L'] },
+  { id:'p26', name:'Short Chino', price:34.99, img:'images/p26.jpg', category:'short', sizes:['S','M','L'] },
+  { id:'p27', name:'Short Sport', price:29.99, img:'images/p27.jpg', category:'short', sizes:['M','L','XL'] },
+  { id:'p28', name:'Short Jean', price:39.99, img:'images/p28.jpg', category:'short', sizes:['S','M','L','XL'] },
+  { id:'p29', name:'Short d’Été', price:32.99, img:'images/p29.jpg', category:'short', sizes:['M','L'] },
+  { id:'p30', name:'Short Cargo', price:44.99, img:'images/p30.jpg', category:'short', sizes:['S','M','L'] },
+  { id:'p31', name:'Chemise Blanche', price:49.99, img:'images/p31.jpg', category:'chemise', sizes:['S','M','L','XL'] },
+  { id:'p32', name:'Chemise Carreaux', price:54.99, img:'images/p32.jpg', category:'chemise', sizes:['M','L','XL'] },
+  { id:'p33', name:'Chemise Manches Longues', price:59.99, img:'images/p33.jpg', category:'chemise', sizes:['S','M','L'] },
+  { id:'p34', name:'Chemise Été', price:44.99, img:'images/p34.jpg', category:'chemise', sizes:['S','M','L','XL'] },
+  { id:'p35', name:'Chemise Décontractée', price:47.99, img:'images/p35.jpg', category:'chemise', sizes:['M','L'] },
+  { id:'p36', name:'Pull à Capuche', price:49.99, img:'images/p36.jpg', category:'pull', sizes:['S','M','L','XL'] },
+  { id:'p37', name:'Cardigan Laine', price:59.99, img:'images/p37.jpg', category:'cardigan', sizes:['S','M','L','XL'] },
+  { id:'p38', name:'Gilet Sans Manches', price:39.99, img:'images/p38.jpg', category:'vest', sizes:['M','L'] },
+  { id:'p39', name:'Veste Légère', price:69.99, img:'images/p39.jpg', category:'veste', sizes:['S','M','L'] },
+  { id:'p40', name:'Parkas Hiver', price:99.99, img:'images/p40.jpg', category:'veste', sizes:['M','L','XL'] },
+  { id:'p41', name:'Blazer Classique', price:89.99, img:'images/p41.jpg', category:'blazer', sizes:['S','M','L','XL'] },
+  { id:'p42', name:'Blazer Décontracté', price:94.99, img:'images/p42.jpg', category:'blazer', sizes:['M','L'] },
+  { id:'p43', name:'Chino Beige', price:59.99, img:'images/p43.jpg', category:'pantalon', sizes:['S','M','L'] },
+  { id:'p44', name:'Pantalon Noir', price:64.99, img:'images/p44.jpg', category:'pantalon', sizes:['M','L','XL'] },
+  { id:'p45', name:'Jogging Sport', price:49.99, img:'images/p45.jpg', category:'pantalon', sizes:['S','M','L','XL'] },
+  { id:'p46', name:'Pantalon Cargo', price:69.99, img:'images/p46.jpg', category:'pantalon', sizes:['M','L'] },
+  { id:'p47', name:'Short en Jean', price:42.99, img:'images/p47.jpg', category:'short', sizes:['S','M','L'] },
+  { id:'p48', name:'Jupe Longue', price:44.99, img:'images/p48.jpg', category:'jupe', sizes:['M','L','XL'] },
+  { id:'p49', name:'Jupe Courte', price:39.99, img:'images/p49.jpg', category:'jupe', sizes:['S','M','L'] },
+  { id:'p50', name:'Combinaison Chic', price:79.99, img:'images/p50.jpg', category:'combinaison', sizes:['M','L','XL'] }
 ];
-
-function renderProducts(list) {
-  const grid = document.getElementById('products-grid');
-  grid.innerHTML = '';
-  list.forEach(p => {
-    const div = document.createElement('div');
-    div.className = 'product-card';
-    div.innerHTML = `
-      <img src="${p.img}" alt="${p.name}">
-      <h3>${p.name}</h3>
-      <p>${p.price.toFixed(2)} €</p>
-      <label>Taille :
-        <select id="size-${p.id}">
-          ${p.sizes.map(s=>`<option value="${s}">${s}</option>`).join('')}
-        </select>
-      </label>
-      <button onclick="addToCart('${p.id}')">Ajouter</button>
-    `;
-    grid.appendChild(div);
-  });
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  renderProducts(products);
-});
