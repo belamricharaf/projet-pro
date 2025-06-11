@@ -152,3 +152,34 @@ a {
 #cart-items li {
   margin-bottom: 0.5rem;
 }
+.filters {
+  background: white;
+  padding: 1rem 5%;
+  display: flex;
+  gap: 2rem;
+  border-bottom: 2px solid #1e2a38;
+}
+
+.filters label {
+  font-weight: 600;
+  color: #1e2a38;
+}
+
+.filters select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+footer.contact {
+  background: #1e2a38;
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+footer a {
+  color: #f4c542;
+  text-decoration: none;
+  font-weight: 600;
+}
