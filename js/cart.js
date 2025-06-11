@@ -1,4 +1,9 @@
-let cart = JSON.parse(localStorage.getItem('cart')) || {};
+let cartTotal = 0;
+function updateCartDisplay(){
+  cartTotal = 0;
+  /* calcule total + affiche panier */
+}
+
 
 function updateCartDisplay() {
   const count = Object.values(cart).reduce((a,b) => a + b, 0);
