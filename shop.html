@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Boutique – Ma Boutique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>…même nav qu'avant…</header>
+  <main>
+    <h2>Nos produits</h2>
+    <div id="products-grid"></div>
+    <div id="cart-panel" class="hidden">
+      <h3>Votre panier</h3>
+      <ul id="cart-items"></ul>
+      <p>Total : <span id="cart-total">0.00</span> €</p>
+      <button id="checkout-btn">Valider la commande</button>
+    </div>
+  </main>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/stripe.js"></script>
+</body>
+</html>
