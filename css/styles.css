@@ -6,23 +6,29 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fdfdfd;
-  color: #111;
+  background-color: #f4f4f4;
+  color: #1e2a38;
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navbar {
-  background-color: #1b2a3a;
+  background-color: #1e2a38;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: white;
 }
 
-.navbar .logo {
-  font-weight: 700;
+.logo {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #f4c542;
 }
 
 .nav-links {
@@ -31,22 +37,27 @@ body {
   gap: 1.5rem;
 }
 
-.nav-links li a {
+.nav-links a {
   color: white;
-  text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4c542;
 }
 
 .hero {
-  background: url('../images/banner.jpg') no-repeat center center/cover;
+  background: url('../images/banner.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   align-items: center;
   padding-left: 5%;
+  color: white;
 }
 
 .hero-text {
-  background: rgba(255,255,255,0.85);
+  background: rgba(30, 42, 56, 0.85);
   padding: 2rem 3rem;
   border-radius: 12px;
 }
@@ -54,23 +65,22 @@ body {
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: #f4c542;
 }
 
 .btn {
   display: inline-block;
-  background-color: #e74c3c;
-  color: white;
+  background-color: #f4c542;
+  color: #1e2a38;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #c0392b;
+  background-color: #d4a320;
 }
 
 .products {
@@ -80,6 +90,7 @@ body {
 
 .products h2 {
   font-size: 2rem;
+  color: #1e2a38;
   margin-bottom: 2rem;
 }
 
@@ -93,7 +104,7 @@ body {
 .product-card {
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   padding: 1rem;
   transition: transform 0.3s ease;
 }
@@ -111,9 +122,33 @@ body {
 .product-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: #1e2a38;
 }
 
 .product-card p {
-  color: #333;
+  color: #444;
   font-weight: 600;
+}
+
+#cart-panel {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+#cart-panel h3 {
+  color: #1e2a38;
+  margin-bottom: 1rem;
+}
+
+#cart-items {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+#cart-items li {
+  margin-bottom: 0.5rem;
 }
